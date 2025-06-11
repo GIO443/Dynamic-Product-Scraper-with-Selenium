@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Mock E-Commerce Store</title>
+    <script>
+        // Simulate dynamic loading with JavaScript
+        window.onload = function() {
+            const products = [
+                { title: "Gaming Laptop Pro", price: "$1299", shipping: "Free Shipping", link: "product1.html" },
+                { title: "Ultrabook X15", price: "$899", shipping: "$15 Shipping", link: "product2.html" },
+                { title: "Budget Laptop Z", price: "$499", shipping: "Free Shipping", link: "product3.html" },
+                { title: "Convertible Laptop Flex", price: "$799", shipping: "$10 Shipping", link: "product4.html" },
+            ];
+
+            const container = document.getElementById("product-list");
+
+            products.forEach(product => {
+                const div = document.createElement("div");
+                div.className = "product";
+                div.innerHTML = `
+                    <h3><a href="${product.link}" class="item-title">${product.title}</a></h3>
+                    <p class="price">${product.price}</p>
+                    <p class="shipping">${product.shipping}</p>
+                `;
+                container.appendChild(div);
+            });
+        };
+    </script>
+    <style>
+        .product {
+            border: 1px solid #ccc;
+            padding: 10px;
+            margin-bottom: 10px;
+            width: 300px;
+        }
+        .item-title {
+            color: darkblue;
+            text-decoration: none;
+        }
+        .price, .shipping {
+            font-size: 14px;
+        }
+    </style>
+</head>
+<body>
+<h1>Mock E-Commerce Laptop Listings</h1>
+<div id="product-list"></div>
+</body>
+</html>

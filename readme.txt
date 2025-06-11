@@ -1,47 +1,34 @@
-# Simulated E-Commerce Product Scraper
+# Product Scraper (Local Mock Site)
 
-This project demonstrates a Python-based Selenium scraper that extracts product data from a locally hosted, JavaScript-rendered mock e-commerce page. It showcases the ability to work with dynamic content, structured extraction, and clean CSV output — all while avoiding ethical or legal concerns related to scraping live commercial websites.
+This project is a simple Python script that uses Selenium to scrape product information from a local HTML file that simulates an e-commerce website. It demonstrates how to extract data from a JavaScript-rendered page and save it into a CSV file.
 
 ## What It Does
 
-- Launches a headless browser using Selenium
-- Loads a local HTML file that simulates a product listing page
-- Waits for JavaScript to render products
-- Extracts product title, price, shipping info, and URL
-- Saves the results to a clean `products.csv` file
+- Opens a local HTML page that loads products with JavaScript
+- Uses Selenium in headless mode to read the rendered content
+- Extracts product title, price, shipping, and link
+- Saves the data into a CSV file
 
-## Technologies Used
+## Files
 
-- Python 3
-- Selenium
-- ChromeDriver (via `webdriver-manager`)
-- HTML + JavaScript (for the mock store)
-- CSV for data output
-
-## Project Structure
-
-selenium-scraper/
-├── mock_store/
-│ └── mock_store.html # Simulated dynamic store (JS-rendered)
-├── scraper.py # Selenium script
-├── products.csv # Scraped output
-└── README.md # Project documentation
-
-## Sample Output
-
-| Title                 | Price  | Shipping       | Link              |
-|----------------------|--------|----------------|-------------------|
-| Gaming Laptop Pro    | $1299  | Free Shipping  | product1.html     |
-| Ultrabook X15        | $899   | $15 Shipping   | product2.html     |
-| Budget Laptop Z      | $499   | Free Shipping  | product3.html     |
+- scraper.py: the Python script that performs the scraping
+- mock_store/mock_store.html: the mock e-commerce page
+- products.csv: the output file with scraped data
 
 ## How to Run
 
-1. Install dependencies:
+1. Install the required libraries:
 
-In bash
-pip install selenium webdriver-manager
+   pip install selenium webdriver-manager
 
-2. Run the scraper:
+2. Make sure mock_store.html is in the correct folder.
 
-python scraper.py
+3. Run the scraper:
+
+   python scraper.py
+
+4. Open products.csv to view the results.
+
+## Why This Is Useful
+
+This project shows how to work with JavaScript-based pages using Selenium and how to structure and export scraped data. It is a safe and ethical way to demonstrate scraping skills without relying on live websites.
